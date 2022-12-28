@@ -9,16 +9,16 @@
 <body class="hold-transition login-page">
     <div class="login-box" id="app">
         <div class="login-logo">
-            <a href="#"><b>Register</b> | RAT 2023</a>
+            <a href="#"><b>Password</b> | RAT 2023</a>
         </div>
         @include('includes.flash_message')
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">Daftar Akun</p>
-                <form action="{{ route('user.store') }}" method="POST">
+                <p class="login-box-msg">Perubahan Password</p>
+                <form action="#" method="POST">
                     @csrf()
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Nama Lengkap" required>
+                        <input type="text" class="form-control" name="name" value="{{ $name }}" disabled>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" name="email" @error('password') is-invalid @enderror value="{{ old('email') }}" required autocomplete="email" placeholder="Email @dianmandiri.id">
+                        <input type="email" class="form-control" name="email" value="{{ $email }}" disabled>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>

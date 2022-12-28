@@ -12,7 +12,7 @@
 
         @include('admin.nav')
 
-        @include('admin.aside')
+        <aside-admin></aside-admin>
 
         <div class="content-wrapper">
 

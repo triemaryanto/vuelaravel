@@ -58,7 +58,7 @@ Vue.component(
     "example-component",
     require("./components/ExampleComponent.vue").default
 );
-
+Vue.component("aside-admin", require("./components/admin/aside.vue").default);
 const router = new VueRouter({
     mode: "history",
     routes,
